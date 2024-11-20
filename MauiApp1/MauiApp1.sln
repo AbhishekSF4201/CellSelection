@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiApp1", "MauiApp1\MauiApp1.csproj", "{120DACBF-0FE5-4FB6-ABE5-46E4B582EAA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syncfusion.Maui.DataGrid", "..\MAUI-Column_Selection\maui-datagrid\maui\src\datagrid\Syncfusion.Maui.DataGrid.csproj", "{880F6DCF-AB8E-4A29-9BEF-15E313532A86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Release-Xml|Any CPU = Release-Xml|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{120DACBF-0FE5-4FB6-ABE5-46E4B582EAA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{120DACBF-0FE5-4FB6-ABE5-46E4B582EAA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{120DACBF-0FE5-4FB6-ABE5-46E4B582EAA2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{120DACBF-0FE5-4FB6-ABE5-46E4B582EAA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{120DACBF-0FE5-4FB6-ABE5-46E4B582EAA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{120DACBF-0FE5-4FB6-ABE5-46E4B582EAA2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{120DACBF-0FE5-4FB6-ABE5-46E4B582EAA2}.Release-Xml|Any CPU.ActiveCfg = Release|Any CPU
+		{120DACBF-0FE5-4FB6-ABE5-46E4B582EAA2}.Release-Xml|Any CPU.Build.0 = Release|Any CPU
+		{120DACBF-0FE5-4FB6-ABE5-46E4B582EAA2}.Release-Xml|Any CPU.Deploy.0 = Release|Any CPU
+		{880F6DCF-AB8E-4A29-9BEF-15E313532A86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{880F6DCF-AB8E-4A29-9BEF-15E313532A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{880F6DCF-AB8E-4A29-9BEF-15E313532A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{880F6DCF-AB8E-4A29-9BEF-15E313532A86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{880F6DCF-AB8E-4A29-9BEF-15E313532A86}.Release-Xml|Any CPU.ActiveCfg = Release-Xml|Any CPU
+		{880F6DCF-AB8E-4A29-9BEF-15E313532A86}.Release-Xml|Any CPU.Build.0 = Release-Xml|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45D15690-921B-4E68-B82C-41D59E8ABCA5}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:pulltoRefresh="clr-namespace:Syncfusion.Maui.PullToRefresh;assembly=Syncfusion.Maui.PullToRefresh"
+             xmlns:pager="clr-namespace:Syncfusion.Maui.DataGrid.DataPager;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:local="clr-namespace:MauiApp1"
+             x:Class="MauiApp1.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:OrderInfoRepository x:Name="viewModel" />
+    </ContentPage.BindingContext>
+    <!--<ContentPage.Resources>
+        <Style TargetType="syncfusion:DataGridCell">
+            <Setter Property="Background"
+                    Value="#AFD5FB" />
+            <Setter Property="TextColor"
+                    Value="#212121" />
+            <Setter Property="FontAttributes"
+                    Value="Italic" />
+            <Setter Property="FontSize"
+                    Value="14" />
+            <Setter Property="FontFamily"
+                    Value="TimesNewRoman" />
+        </Style>
+    </ContentPage.Resources>-->
+    <ContentPage.Content>
+         <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+               
+                <RowDefinition Height="*" />
+               
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal" Grid.Row="0" Margin="5">
+
+                <Picker x:Name="picker"
+                    Title="Select a function" SelectedIndexChanged="picker_SelectedIndexChanged" >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}" >
+                            <x:String></x:String>
+                            <x:String>Single</x:String>
+                            <x:String>Single Select</x:String>
+                            <x:String>Multiple</x:String>
+                            <x:String>Cell to row</x:String>
+                            <x:String>Stacked header</x:String>
+                            <x:String>Grouping</x:String>
+                            <x:String>Allow dragging column</x:String>
+                            <x:String>Allow dragging row</x:String>
+                            <x:String>Freeze column count</x:String>
+                            <x:String>Unbound row - top</x:String>
+                            <x:String>Unbound column</x:String>
+                            <x:String>Edit</x:String>
+                            <x:String>Sorting</x:String>
+                            <x:String>Allow resizing column</x:String>
+                            <x:String>Selected index</x:String>
+                            <x:String>Remove a row</x:String>
+                            <x:String>Add a row</x:String>
+                            <x:String>Default width</x:String>
+                            <x:String>Visible</x:String>
+                            <x:String>Unbound row - bottom</x:String>
+                            <x:String>Unbound row - Fixed top</x:String>
+                            <x:String>Unbound row - Fixed bottom</x:String>
+                           
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+                <Button Clicked="Button_Clicked" Text="Summary Page"></Button>
+               
+            </StackLayout>
+            <syncfusion:SfDataGrid x:Name="dataGrid"
+                                   Grid.Row="3"
+                                   ItemsSource="{Binding OrderInfoCollection}"
+                                   NavigationMode="Cell"
+                                   SelectionUnit="Cell" 
+                                   EditTapAction="OnDoubleTap"
+                                   SelectionMode="Single">
+              
+            </syncfusion:SfDataGrid>
+        </Grid>
+
+        <!--<Grid>
+            <pulltoRefresh:SfPullToRefresh x:Name="pullToRefresh"
+                                           TransitionMode="SlideOnTop">
+
+                <pulltoRefresh:SfPullToRefresh.PullableContent>
+                    <syncfusion:SfDataGrid x:Name="dataGrid"
+                                           SelectionUnit="Cell"
+                                           NavigationMode="Cell"
+                                           SelectionMode="Single"
+                                       ItemsSource="{Binding OrderInfoCollection}">
+                    </syncfusion:SfDataGrid>
+                </pulltoRefresh:SfPullToRefresh.PullableContent>
+            </pulltoRefresh:SfPullToRefresh>
+        </Grid>-->
+    </ContentPage.Content>
+</ContentPage>

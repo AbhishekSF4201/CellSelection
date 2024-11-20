@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.NewPage1"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+            
+             xmlns:local="clr-namespace:MauiApp1"
+             Title="NewPage1">
+    <ContentPage.BindingContext>
+        <local:OrderInfoRepository x:Name="viewModel" />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+
+                <RowDefinition Height="*" />
+
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal"
+                         Grid.Row="0"
+                         Margin="5">
+
+                <Picker x:Name="picker"
+                        Title="Select a function"
+                        SelectedIndexChanged="picker_SelectedIndexChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String></x:String>
+                            <x:String>Single</x:String>
+                            <x:String>Single Select</x:String>
+                            <x:String>Multiple</x:String>
+                            <x:String>Caption summary row</x:String>
+                            <x:String>Caption summary column</x:String>
+                            <x:String>Group summary row</x:String>
+                            <x:String>Group summary column</x:String>
+                            <x:String>Table summary row</x:String>
+                            <x:String>Table summary column</x:String>
+                           
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Button Clicked="Button_Clicked"
+                        Text=" Back to main page"></Button>
+
+            </StackLayout>
+            <syncfusion:SfDataGrid x:Name="dataGrid"
+                                   Grid.Row="3"
+                                   ItemsSource="{Binding OrderInfoCollection}"
+                                   NavigationMode="Cell"
+                                   SelectionUnit="Cell"
+                                   EditTapAction="OnDoubleTap"
+                                   SelectionMode="Single">
+
+            </syncfusion:SfDataGrid>
+        </Grid>
+
+        <!--<Grid>
+         <pulltoRefresh:SfPullToRefresh x:Name="pullToRefresh"
+                                        TransitionMode="SlideOnTop">
+
+             <pulltoRefresh:SfPullToRefresh.PullableContent>
+                 <syncfusion:SfDataGrid x:Name="dataGrid"
+                                        SelectionUnit="Cell"
+                                        NavigationMode="Cell"
+                                        SelectionMode="Single"
+                                    ItemsSource="{Binding OrderInfoCollection}">
+                 </syncfusion:SfDataGrid>
+             </pulltoRefresh:SfPullToRefresh.PullableContent>
+         </pulltoRefresh:SfPullToRefresh>
+     </Grid>-->
+    </ContentPage.Content>
+</ContentPage>
